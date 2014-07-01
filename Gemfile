@@ -5,7 +5,8 @@ gem 'rails', '4.1.1'
 
 # Use sqlite3 as the database for Active Record on development/test
 group :development, :test do
-	gem 'sqlite3'
+	#gem 'sqlite3'
+	gem 'pg'
 end
 
 # Use PostgreSQL for production system
@@ -18,6 +19,9 @@ gem 'sass-rails', '~> 4.0.3'
 
 # Bootstrap SASS
 gem 'bootstrap-sass'
+
+# Browser Prefixer!
+gem 'autoprefixer-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
