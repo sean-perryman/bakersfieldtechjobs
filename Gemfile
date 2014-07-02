@@ -29,6 +29,9 @@ gem 'mail_form'
 # Use simple form
 gem 'simple_form'
 
+# TinyMCE (Rich Text Editor)
+gem 'tinymce-rails'
+
 #Carrierwave to compliment Cloundinary
 #gem 'carrierwave'
 

@@ -1,6 +1,14 @@
 Rails.application.routes.draw do
-  get 'landing_page/index'
+  resources :companies
 
+  #Company Listing (Add/Remove/Show)
+  # Roadmap Page
+  get 'roadmap/index'
+  
+  # Landing Page
+  get 'landing_page/index'
+  
+  # Contact Form
   resources "contacts", only: [:new, :create]
 
   resources :jobs

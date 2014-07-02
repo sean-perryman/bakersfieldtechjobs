@@ -18,3 +18,15 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+.description-box {
+	height: 200px;
+}
+
+.control-group {
+	padding: 5px 0;
+}
+
+input[value='Create Job'] {
+	margin-top: 20px;
+}
