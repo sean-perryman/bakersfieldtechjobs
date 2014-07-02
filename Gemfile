@@ -10,6 +10,9 @@ gem 'sass-rails', '~> 4.0.3'
 # Bootstrap SASS
 gem 'bootstrap-sass'
 
+# HAML
+gem 'haml-rails'
+
 # Browser Prefixer!
 gem 'autoprefixer-rails'
 

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   get 'landing_page/index'
 
+  resources "contacts", only: [:new, :create]
+
   resources :jobs
 
   # The priority is based upon order of creation: first created -> highest priority.
