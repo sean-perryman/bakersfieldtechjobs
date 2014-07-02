@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  resources :companies
-
   #Company Listing (Add/Remove/Show)
+  resources :companies
+  
   # Roadmap Page
   get 'roadmap/index'
   
