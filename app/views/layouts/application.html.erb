@@ -14,8 +14,8 @@
 		  </div>
 	  
 	  	<ul class="nav navbar-nav">
-	  		<li class="hidden"><%= link_to "All Jobs", jobs_path %></li>
-	  		<li><a href="#">All Jobs</a></li>
+	  		<li><%= link_to "All Jobs", jobs_path %></li>
+	  		<li><a class="hidden" href="#">All Jobs</a></li>
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<li>Welcome<a class="navbar-information" href="#">Guest!</a> <a class="navbar-information" href="#">Sign in</a>or<a class="navbar-information" href="#">Sign up</a></li>
@@ -25,6 +25,6 @@
 	
 	<%= yield %>
 
-<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved  <%= link_to "Company List", companies_path, :class => 'hidden' %>  <%= link_to "Roadmap", roadmap_path, :class => 'hidden' %>  <a class='hidden' href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
+<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <%= link_to "Company List", companies_path, :class => '' %> | <%= link_to "Roadmap", roadmap_path, :class => '' %> | <a class='' href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
 </body>
 </html>

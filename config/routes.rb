@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   #Company Listing (Add/Remove/Show)
-  resources :companies
+  resources :companies#, only: [:index]
   
   # Roadmap Page
   get 'roadmap', to: 'roadmap#index'

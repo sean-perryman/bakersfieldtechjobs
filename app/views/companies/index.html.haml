@@ -11,7 +11,8 @@
       %td= company.name
       %td 
         %a{:href => company.career_url }>#{company.career_url}
-      %td= company.email
+      %td
+        %a{:href => 'mailto:' + company.email }>#{company.email}
 
 %br
 

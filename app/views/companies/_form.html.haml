@@ -7,7 +7,9 @@
           %li= msg
 
   .container-fluid.center-block
-    .col-md-6.well
-    
-  .actions
-    = f.submit 'Save'
+    .col-md-4.well
+      = f.input :name
+      = f.input :career_url
+      = f.input :email
+      .actions
+        = f.submit 'Save', :class => 'btn btn-default'
