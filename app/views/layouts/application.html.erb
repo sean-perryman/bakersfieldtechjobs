@@ -14,16 +14,17 @@
 		  </div>
 	  
 	  	<ul class="nav navbar-nav">
-	  		<li><%= link_to "All Jobs", jobs_path %></li>
+	  		<li class="hidden"><%= link_to "All Jobs", jobs_path %></li>
+	  		<li><a href="#">All Jobs</a></li>
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li>Signed is as<a class="navbar-information" href="#">Guest!</a> <a class="navbar-information" href="#">Sign in</a>or<a class="navbar-information" href="#">Sign up</a></li>
+				<li>Welcome<a class="navbar-information" href="#">Guest!</a> <a class="navbar-information" href="#">Sign in</a>or<a class="navbar-information" href="#">Sign up</a></li>
 			</ul>
 		</div>
 	</nav>
 	
 	<%= yield %>
 
-<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <%= link_to "Company List", companies_path %> | <%= link_to "Roadmap", roadmap_index_path %> | <a href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
+<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved  <%= link_to "Company List", companies_path, :class => 'hidden' %>  <%= link_to "Roadmap", roadmap_path, :class => 'hidden' %>  <a class='hidden' href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
 </body>
 </html>

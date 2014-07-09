@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :companies
   
   # Roadmap Page
-  get 'roadmap/index'
+  get 'roadmap', to: 'roadmap#index'
   
   # Landing Page
   get 'landing_page/index'
