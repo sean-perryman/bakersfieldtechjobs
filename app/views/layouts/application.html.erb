@@ -17,19 +17,13 @@
 	  		<li><%= link_to "All Jobs", jobs_path %></li>
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><%= link_to "Company List", companies_path %></li>
-				<li><%= link_to "Roadmap", roadmap_index_path %></li>
-				<li><%= link_to "Post New Job", new_job_path %></li>
-				<li><%= form_tag jobs_path, :class => "navbar-form", method: :get do |f| %>
-				  <%= text_field_tag :search, params[:search], :class => "form-control" %>
-				  <%= submit_tag "Search", name: nil, :class => "btn btn-default" %>
-				<% end %></li>		
+				<li>Signed is as<a class="navbar-information" href="#">Guest!</a> <a class="navbar-information" href="#">Sign in</a>or<a class="navbar-information" href="#">Sign up</a></li>
 			</ul>
 		</div>
 	</nav>
 	
 	<%= yield %>
 
-<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <a href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
+<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <%= link_to "Company List", companies_path %> | <%= link_to "Roadmap", roadmap_index_path %> | <a href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
 </body>
 </html>

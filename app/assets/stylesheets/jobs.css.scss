@@ -30,3 +30,16 @@ body {
 input[value='Create Job'] {
 	margin-top: 20px;
 }
+
+.list-jobs-header {
+	display: inline-block;
+
+	input#search {
+		margin-left: 20px;
+
+	}
+
+	input {
+		margin-bottom: 10px;
+	}
+}
