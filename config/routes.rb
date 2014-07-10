@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  # Devise for user authentication
+  devise_for :users
+  
+  devise_scope :user do
+    get '/sign_up' => 'devise/registrations#new'
+    get '/sign_in' => 'devise/sessions#new'
+  end
+
   #Company Listing (Add/Remove/Show)
   resources :companies#, only: [:index]
   
