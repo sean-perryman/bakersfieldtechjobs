@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.2'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 gem 'pg'
@@ -56,6 +58,11 @@ gem 'spring',        group: :development
 gem 'mysql2'
 gem 'thinking-sphinx'
 
+# Per Heroku recommendation
+gem 'rails_12factor',	group: :production
+
+# New Relic Analytics
+gem 'newrelic_rpm'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -68,4 +75,3 @@ gem 'thinking-sphinx'
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-
