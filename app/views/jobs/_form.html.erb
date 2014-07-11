@@ -14,12 +14,12 @@
     <div class="col-md-6 well">
       <%= f.input :title, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
       <%= f.input :description, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6 description-box' } %>
-      <%= f.input :date_posted, wrapper_html: { class: 'hidden' } %>
+      <%= f.input :date_posted, wrapper_html: { class: 'hidden' }, input_html: { value: Date.today.to_s } %>
       <%= f.input :company, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
       <%= f.input :contact_name, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
       <%= f.input :contact_email, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
       <%= f.input :contact_phone, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
-      <%= f.input :owner, wrapper_html: { class: 'row' }, label_html: { class: 'col-md-3' }, input_html: { class: 'col-md-6' } %>
+      <%= f.input :owner, input_html: { value: current_user.id}, wrapper_html: { class: 'hidden' } %>
       <%= f.input :active, wrapper_html: { class: 'hidden' }, :input_html => { :checked => true } %>
         
       <div class="actions">

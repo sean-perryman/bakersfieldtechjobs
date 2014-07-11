@@ -19,6 +19,7 @@
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
+					<li><%= link_to "Post New Job", new_job_path %></li>
 					<li>Logged in as<%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link navbar-information' %>|<%= link_to "Logout?", destroy_user_session_path, method: :delete, :class => 'navbar-link navbar-information'  %></li>
 				<% else %>
 					<li>Welcome guest!<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-information navbar-link'  %>or<%= link_to "Sign in", new_user_session_path, :class => 'navbar-information navbar-link'  %></a></li>
