@@ -10,21 +10,13 @@
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
 	  <div class="container navbar-inner">
 		  <div class="navbar-header">
-		   	<%= link_to "Bakersfield Tech Jobs!", root_path, :class => 'navbar-brand' %>
+		   	<%= link_to "Bakersfield Tech Jobs", root_path, :class => 'navbar-brand' %>
 		  </div>
-	  
-	  	<ul class="nav navbar-nav">
-	  		<li class="hidden"><%= link_to "All Jobs", jobs_path %></li>
-	  		<li><a href="#">All Jobs</a></li>
-	  	</ul>
-			<ul class="nav navbar-nav navbar-right">
-				<li>Welcome<a class="navbar-information" href="#">Guest!</a> <a class="navbar-information" href="#">Sign in</a>or<a class="navbar-information" href="#">Sign up</a></li>
-			</ul>
 		</div>
 	</nav>
-	
+	<div class="alert alert-info" role="alert">Hey! Working on some unit tests now, hoping to be live by Friday 06/18/2014! Tell your friends!</div>
 	<%= yield %>
 
-<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved  <%= link_to "Company List", companies_path, :class => 'hidden' %>  <%= link_to "Roadmap", roadmap_path, :class => 'hidden' %>  <a class='hidden' href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
+	<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <a href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
 </body>
 </html>
