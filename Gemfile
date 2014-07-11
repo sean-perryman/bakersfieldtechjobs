@@ -54,6 +54,7 @@ gem 'spring',        group: :development
 # Text searching
 gem 'mysql2'
 gem 'thinking-sphinx'
+gem 'flying-sphinx',	group: :production
 
 # Per Heroku recommendation
 gem 'rails_12factor',	group: :production
