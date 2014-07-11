@@ -55,7 +55,7 @@ gem 'spring',        group: :development
 # Text searching
 gem 'mysql2'
 gem 'thinking-sphinx'
-
+gem 'flying-sphinx'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
