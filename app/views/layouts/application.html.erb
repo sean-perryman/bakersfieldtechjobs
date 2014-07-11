@@ -19,7 +19,9 @@
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
-					<li><%= link_to "Post New Job", new_job_path %></li>
+					<% if current_user.email == 'se@nperryman.com' %>
+						<li><%= link_to "Post New Job", new_job_path %></li>
+					<% end %>
 					<li>Logged in as<%= link_to current_user.email, edit_user_registration_path, :class => 'navbar-link navbar-information' %>|<%= link_to "Logout?", destroy_user_session_path, method: :delete, :class => 'navbar-link navbar-information'  %></li>
 				<% else %>
 					<li>Welcome guest!<%= link_to "Sign up", new_user_registration_path, :class => 'navbar-information navbar-link'  %>or<%= link_to "Sign in", new_user_session_path, :class => 'navbar-information navbar-link'  %></a></li>
@@ -37,6 +39,11 @@
 	
 	<%= yield %>
 
-	<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | <%= link_to "Company List", companies_path, :class => '' %> | <%= link_to "Roadmap", roadmap_path, :class => '' %> | <a class='' href="mailto:info@bakersfieldtechjobs.com">Contact us!</a></small>
+	<small class="center-block">Copyright 2014 BakersfieldTechJobs.com, All Rights Reserved | 
+		<% if user_signed_in? %>
+			<%= link_to "Company List", companies_path %> | <%= link_to "Roadmap", roadmap_path %> | 
+		<% end %>
+		<a href="mailto:info@bakersfieldtechjobs.com">Contact us!</a>
+	</small>
 </body>
 </html>
