@@ -17,7 +17,7 @@
         <% @jobs.each do |job| %>
           <tr class='main_row' data-link="<%= job_path(job) %>">
             <td><%= job.title %></td>
-            <td><div class="truncate"><%= job.description %></div></td>
+            <td><%= truncate(strip_tags(job.description), length: 80) %></td>
             <td>Posted <%= time_ago_in_words(job.created_at) + " ago" %></td>
           </tr>
         <% end %>
