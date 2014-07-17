@@ -26,8 +26,8 @@ class JobsControllerTest < ActionController::TestCase
   end
 
   test "should get edit if owned by the user" do
-    sign_in :sean
-    get :edit, id: @job
+    sign_in users(:sean)
+    post :edit, id: @job
     assert_response :success
   end
 
