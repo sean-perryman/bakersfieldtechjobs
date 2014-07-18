@@ -8,7 +8,7 @@
 		<p>Posted by: <%= @job.contact_name %></p><a class="btn btn-default" href="mailto:<%= @job.contact_email %>">Apply Now!</a>
 	</div>		
 	<div class="row">
-		<pre><div class="show_job_description"><%= @job.description %></div></pre>
+		<pre><%= @job.description %></pre>
 	</div>	
 	<div class="row">
 		<small><%= @job.date_posted %></small>
