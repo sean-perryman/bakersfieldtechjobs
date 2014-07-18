@@ -1,7 +1,6 @@
 <div class="landing_page_intro jumbotron">
 <h1>Welcome to Bakersfield Tech Jobs!</h1>
-	<p class="hidden lead">Hello, and welcome. This site serves to aggregate the available tech jobs in Bakersfield. Currently it is being curated in its entirety, but will be adding in the ability for employers to post new jobs; as well as for job seekers to store their resume and submit with a cover letter in a quick manner. Thank you for checking us out!</p>
-	<p class="lead">Hello! We aren't quite ready for visitors just yet, please check back soon!</p>
+	<p class="lead">Hello, and welcome. This site showcases available tech jobs in Bakersfield. Currently it is being curated, but will be adding in the ability for employers to post new jobs; as well as for job seekers to store their resume and submit with a cover letter in a quick manner. Thanks for visiting!</p>
 </div>
 <%= form_tag jobs_path, :class => "navbar-form hidden", method: :get do |f| %>
 	<%= text_field_tag :search, params[:search], :class => "form-control" %>
@@ -9,6 +8,6 @@
 <% end %>
 
 <div id="instructions" class="">
-	<p class="text-center">Employers: Post your available positions for FREE!</p>
-	<p class="text-center">Job Seekers: Use our handy search feature to search available positions!</p>
+	<p class="text-center"><strong>Employers</strong>: Please <a href="mailto:info@bakersfieldtechjobs.com">email</a> us to be granted job posting access.</p>
+	<p class="text-center"><strong>Job Seekers</strong>: Use our handy search feature to search available positions!</p>
 </div>
