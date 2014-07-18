@@ -19,7 +19,7 @@ class JobsControllerTest < ActionController::TestCase
   test "should create job if admin" do
     sign_in users(:admin)
     assert_difference('Job.count') do
-      post :create, job: jobs(:one)
+      post :create, job: jobs(:one).attributes
     end
 
     assert_redirected_to job_path(assigns(:job))
@@ -33,7 +33,7 @@ class JobsControllerTest < ActionController::TestCase
 
   test "should update job if admin" do
     sign_in users(:admin)
-    patch :update, id: @job, job: jobs(:one)
+    patch :update, id: @job, job: jobs(:one).attributes
     assert_redirected_to job_path(assigns(:job))
   end
 

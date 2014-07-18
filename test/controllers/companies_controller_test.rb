@@ -21,7 +21,7 @@ class CompaniesControllerTest < ActionController::TestCase
   test "should create company if admin" do
     sign_in users(:admin)
     assert_difference('Company.count') do
-      post :create, company: companies(:one)
+      post :create, company: companies(:one).attributes
     end
 
     assert_redirected_to company_path(assigns(:company))
@@ -41,7 +41,7 @@ class CompaniesControllerTest < ActionController::TestCase
 
   test "should update company if admin" do
     sign_in users(:admin)
-    patch :update, id: @company, company: companies(:one)
+    patch :update, id: @company, company: companies(:one).attributes
     assert_redirected_to company_path(assigns(:company))
   end
 
