@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(resource)
 	  jobs_path
 	end
+
+	def login_required
+    redirect_to('/users/sign_in') if current_user.blank?
+  end
 end

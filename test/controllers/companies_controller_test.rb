@@ -12,11 +12,13 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
+    sign_in users(:sean)
     get :new
     assert_response :success
   end
 
-  test "should create company" do
+  test "should create company if logged in" do
+    sign_in users(:sean)
     assert_difference('Company.count') do
       post :create, company: companies(:one)
     end
@@ -35,6 +37,7 @@ class CompaniesControllerTest < ActionController::TestCase
   end
 
   test "should update company" do
+    sign_in users(:sean)
     patch :update, id: @company, company: companies(:one)
     assert_redirected_to company_path(assigns(:company))
   end
