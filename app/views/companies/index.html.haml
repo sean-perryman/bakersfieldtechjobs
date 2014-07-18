@@ -11,8 +11,9 @@
       %td= company.name
       %td 
         %a{:href => company.career_url }>#{company.career_url}
-      %td= company.email
+      %td
+        %a{:href => 'mailto:' + company.email }>#{company.email}
 
 %br
-
-.btn.btn-default= link_to 'New Company', new_company_path
+- if user_signed_in?  && current_user.email == 'se@nperryman.com'
+  .btn.btn-default= link_to 'New Company', new_company_path

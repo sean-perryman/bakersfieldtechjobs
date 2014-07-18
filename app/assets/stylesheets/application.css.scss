@@ -17,6 +17,21 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+html {
+	padding: 10px
+}
+
+body {
+	padding: 20px;
+	padding-top: 70px;
+}
+
+@media screen and (max-width: 768px) {
+	html {
+		padding: 100px
+	}
+}
+
 .nav li a {
 	display: inline-block;
 }

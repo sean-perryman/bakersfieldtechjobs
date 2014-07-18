@@ -54,7 +54,13 @@ gem 'spring',        group: :development
 # Text searching
 gem 'mysql2'
 gem 'thinking-sphinx'
-#gem 'flying-sphinx',	group: :production
+gem 'flying-sphinx',	group: :production
 
-# Production Stuff
+# Per Heroku recommendation
 gem 'rails_12factor',	group: :production
+
+# New Relic Analytics
+gem 'newrelic_rpm'
+
+# Devise for user authentication!
+gem 'devise'

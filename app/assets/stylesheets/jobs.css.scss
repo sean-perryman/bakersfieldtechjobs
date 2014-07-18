@@ -2,15 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html {
-	padding: 10px
-}
-
-body {
-	padding: 20px;
-	padding-top: 70px;
-}
-
 /* String Truncation */
 .truncate {
   width: 300px;
@@ -36,10 +27,34 @@ input[value='Create Job'] {
 
 	input#search {
 		margin-left: 20px;
-
 	}
 
 	input {
 		margin-bottom: 10px;
+	}
+}
+
+
+.show-controls>a.btn {
+	margin: 25px 10px 0 0;
+}
+
+.show-controls>a:first-child {
+	margin-left: -14px;
+}
+
+/* When using the [class=""], it looks like you have to match the class definition precisely. */
+.show-controls>a:last-child[class="btn btn-danger"] {
+	color: white;
+}
+
+.poster {
+	margin-bottom: 20px;
+	p { 
+		display: inline-block; 
+	}
+	a { 
+		display: inline-block; 
+		margin-left: 20px;
 	}
 }

@@ -1,5 +1,7 @@
 class JobsController < ApplicationController
   before_action :set_job, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :update, :edit, :destroy]
+  before_filter :verify_is_admin, only: [:new, :create, :update, :edit, :destroy]
 
   # GET /jobs
   # GET /jobs.json
@@ -69,6 +71,6 @@ class JobsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def job_params
-      params.require(:job).permit(:title, :description, :date_posted, :company, :contact_name, :contact_email, :contact_phone, :owner, :active)
+      params.permit(:title, :description, :date_posted, :company, :contact_name, :contact_email, :contact_phone, :owner, :active)
     end
 end

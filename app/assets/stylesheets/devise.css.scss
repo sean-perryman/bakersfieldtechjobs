@@ -1,0 +1,33 @@
+/* Styles that are going to be applied to the Devise user views */
+.form-horizontal>.container-fluid {
+	h2 {
+		padding-top: 50px;
+	}
+
+	input[class="btn btn btn-default center-block"] {
+		margin-top: 20px;
+	}
+}
+
+.user_remember_me {
+	input {
+		float:right; 
+	 	position: relative;
+	 	
+	}
+	label {
+		margin-right: 20px;
+	}
+}
+
+.form-actions>input.new-user-submit {
+	margin-left: 30%;
+}
+
+.form-actions.new-user {
+	margin-top: 15px;
+}
+
+p.help-block {
+	display: none;
+}

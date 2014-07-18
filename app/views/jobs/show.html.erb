@@ -4,8 +4,8 @@
 	<div class="row">
 		<h2><%= @job.title %></h2>
 	</div>
-	<div class="row">
-		<p>Posted by: <%= @job.contact_name %></p>
+	<div class="row poster">
+		<p>Posted by: <%= @job.contact_name %></p><a class="btn btn-default" href="mailto:<%= @job.contact_email %>">Apply Now!</a>
 	</div>		
 	<div class="row">
 		<pre><%= @job.description %></pre>
@@ -13,9 +13,10 @@
 	<div class="row">
 		<small><%= @job.date_posted %></small>
 	</div>
-	<div class="row">
-		<a href="mailto:<%= @job.contact_email %>">Email!</a>
+	<div class="show-controls">
+	<%= link_to 'Back', jobs_path, :class => 'btn btn-default' %>
+	<% if user_signed_in? && @job.owner == current_user.id %>
+		<%= link_to 'Edit Job', edit_job_path, :class => 'btn btn-default' %><%= link_to 'Destroy', @job, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'btn btn-danger' %>
+	<% end %>
 	</div>
 </div>
-
-<%= link_to 'Back', jobs_path, :class => 'btn btn-default' %>
