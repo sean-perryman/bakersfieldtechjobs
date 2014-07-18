@@ -45,4 +45,32 @@ class JobsControllerTest < ActionController::TestCase
 
     assert_redirected_to jobs_path
   end
+
+  test "should not create new job if not admin" do
+    sign_in users(:regular)
+    assert_no_difference('Job.count') do
+      post :create, job: jobs(:one)
+    end
+    assert_redirected_to jobs_path
+  end
+
+  test "should not update job if not admin" do
+    sign_in users(:regular)
+    patch :update, id: @job, job: jobs(:one)
+    assert_redirected_to jobs_path
+  end
+
+  test "should not destroy job if not admin" do
+    sign_in users(:regular)
+    assert_no_difference('Job.count') do
+      delete :destroy, id: @job
+    end
+    assert_redirected_to jobs_path
+  end
+
+  test "should not get edit if not admin" do
+    sign_in users(:regular)
+    post :edit, id: @job
+    assert_redirected_to jobs_path
+  end
 end
