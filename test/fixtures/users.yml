@@ -1,6 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-sean:
+admin:
   id: 1
+  email: se@nperryman.com
+  encrypted_password: $2a$10$eZcuNRf52V23SG2//AE7lep1w0t3V4JuHhp5J5YR0ITTtCc.sqeYG
+  admin: true
+
+regular:
+  id: 2
   email: sean@worxtech.com
   encrypted_password: $2a$10$eZcuNRf52V23SG2//AE7lep1w0t3V4JuHhp5J5YR0ITTtCc.sqeYG
+  admin: true
