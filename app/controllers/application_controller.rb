@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
 	def login_required
     redirect_to('/users/sign_in') if current_user.blank?
   end
+
+  def verify_is_admin
+	  (current_user.nil?) ? redirect_to(root_path) : (redirect_to(root_path) unless current_user.admin?)
+	end
 end
