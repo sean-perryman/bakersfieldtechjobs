@@ -23,10 +23,8 @@
 		  <div class="navbar-header">
 		   	<%= link_to "Bakersfield Tech Jobs", root_path, :class => 'navbar-brand' %>
 		  </div>
-	  
 	  	<ul class="nav navbar-nav">
 	  		<li><%= link_to "All Jobs", jobs_path %></li>
-	  		<li><a class="hidden" href="#">All Jobs</a></li>
 	  	</ul>
 			<ul class="nav navbar-nav navbar-right">
 				<% if user_signed_in? %>
