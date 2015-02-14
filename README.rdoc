@@ -1,28 +1,6 @@
-== README
+BakersfieldTechJobs.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This was something I was working on to aggregate tech job postings in Bakersfield, CA. 
+I ran into some issues with hosting the app on Heroku and using FlyingSphinx. 
+I've since learned a great deal about deploying a rails app to an inexpensive VPS,
+so it is quite possible I'll pick this project back up and continue on with it. 
